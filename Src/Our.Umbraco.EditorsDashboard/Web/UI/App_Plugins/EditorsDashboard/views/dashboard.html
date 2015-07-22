@@ -1,5 +1,11 @@
 ﻿<div class="bua bua--dashboard" ng-controller="Our.Umbraco.EditorsDashboard.DashboardController">
     
     <h1>Hello</h1>
+    
+    <ul>
+        <li ng-repeat="f in favourites">
+            <a ng-click="remove(f)" prevent-default><i class="icon icon-delete"></i></a> <a href="/umbraco/#/content/content/edit/{{f.nodeId}}">{{f.name}}</a>
+        </li>
+    </ul>
 
 </div>

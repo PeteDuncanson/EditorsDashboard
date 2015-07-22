@@ -1,17 +1,27 @@
 ﻿angular.module('umbraco.resources').factory('Our.Umbraco.EditorsDashboard.Resources',
     function ($q, $http, umbRequestHelper) {
         return {
-            getUsers: function (page) {
-                var url = "/umbraco/backoffice/api/BulkUserAdminApi/GetUsers";
+            getFavourites: function (page) {
+                var url = "/umbraco/backoffice/EditorsDashboard/EditorsDashboardApi/GetFavourites";
                 return umbRequestHelper.resourcePromise(
                     $http({
                         url: url,
-                        method: "GET",
+                        method: "GET"
+                    }),
+                    'Failed to get favourites'
+                );
+            },
+            removeFavourite: function (favId) {
+                var url = "/umbraco/backoffice/EditorsDashboard/EditorsDashboardApi/RemoveFavourite";
+                return umbRequestHelper.resourcePromise(
+                    $http({
+                        url: url,
+                        method: "POST",
                         params: {
-                            p: page
+                            id: favId
                         }
                     }),
-                    'Failed to get users'
+                    'Failed to remove favourites'
                 );
             }
         };
