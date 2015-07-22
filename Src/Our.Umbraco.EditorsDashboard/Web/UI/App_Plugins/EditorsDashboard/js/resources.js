@@ -11,6 +11,19 @@
                     'Failed to get favourites'
                 );
             },
+            addToFavourites: function(nodeId) {
+                var url = "/umbraco/backoffice/EditorsDashboard/EditorsDashboardApi/AddToFavourites";
+                return umbRequestHelper.resourcePromise(
+                    $http({
+                        url: url,
+                        method: "GET",
+                        params: {
+                            nodeId: nodeId
+                        }
+                    }),
+                    'Failed to add to favourites'
+                );
+            },
             removeFavourite: function (favId) {
                 var url = "/umbraco/backoffice/EditorsDashboard/EditorsDashboardApi/RemoveFavourite";
                 return umbRequestHelper.resourcePromise(

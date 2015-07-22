@@ -204,7 +204,9 @@
     <Content Include="Web\UI\App_Plugins\EditorsDashboard\css\dashboard.css" />
     <Content Include="Web\UI\App_Plugins\EditorsDashboard\js\controllers.js" />
     <Content Include="Web\UI\App_Plugins\EditorsDashboard\js\directives.js" />
+    <Content Include="Web\UI\App_Plugins\EditorsDashboard\js\services.js" />
     <Content Include="Web\UI\App_Plugins\EditorsDashboard\js\resources.js" />
+    <Content Include="Web\UI\App_Plugins\EditorsDashboard\views\actionView.html" />
     <Content Include="Web\UI\App_Plugins\EditorsDashboard\views\dialog.html" />
     <Content Include="Web\UI\App_Plugins\EditorsDashboard\views\dashboard.html" />
   </ItemGroup>

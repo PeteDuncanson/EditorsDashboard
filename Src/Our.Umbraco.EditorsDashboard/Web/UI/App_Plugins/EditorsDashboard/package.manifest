@@ -2,6 +2,7 @@
 	javascript: [
 		'~/App_Plugins/EditorsDashboard/js/controllers.js',
 		'~/App_Plugins/EditorsDashboard/js/directives.js',
+		'~/App_Plugins/EditorsDashboard/js/services.js',
 		'~/App_Plugins/EditorsDashboard/js/resources.js'
 	],
 	css: [

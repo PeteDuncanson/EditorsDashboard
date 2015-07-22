@@ -28,7 +28,7 @@
 
 ]);
 
-angular.module("umbraco").controller("Our.Umbraco.EditorsDashboard.DialogController", [
+angular.module("umbraco").controller("Our.Umbraco.EditorsDashboard.ActionViewController", [
 
 	"$scope",
 	"$rootScope",
@@ -36,7 +36,7 @@ angular.module("umbraco").controller("Our.Umbraco.EditorsDashboard.DialogControl
 
 	function($scope, $rootScope, buaResources) {
 
-		
+	    console.log($scope);
 
 	}
 
