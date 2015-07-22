@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+	<info>
+		<package>
+			<name>Editors Dashboard</name>
+			<version>0.0</version>
+			<license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
+			<url>http://our.umbraco.org/projects/backoffice-extensions/editors-dashboard</url>
+			<requirements>
+				<major>7</major>
+				<minor>1</minor>
+				<patch>4</patch>
+			</requirements>
+		</package>
+		<author>
+			<name>Matt Brailsford, Pete Duncanson</name>
+			<website>http://our.umbraco.org</website>
+		</author>
+		<readme><![CDATA[]]></readme>
+	</info>
+
+	<DocumentTypes />
+	<Templates />
+	<Stylesheets />
+	<Macros />
+	<DictionaryItems />
+	<Languages />
+	<DataTypes />
+  	<Actions>
+  	    <Action runat="install" undo="true" alias="addDashboardSection" dashboardAlias="Our.Umbraco.EditorsDashboard">
+	      <section alias="Our.Umbraco.EditorsDashboard">
+	        <areas>
+	          <area>content</area>
+	        </areas>
+	        <tab caption="Dashboard">
+	          <control showOnce="false" addPanel="true" panelCaption="">/App_Plugins/EditorsDashboard/views/dashboard.html</control>
+	        </tab>
+	      </section>
+	    </Action>
+	</Actions>
+
+	<control />
+	<files />
+
+</umbPackage>

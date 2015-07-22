@@ -1,0 +1,35 @@
+﻿<div class="bua bua--dialog" ng-controller="Our.Umbraco.EditorsDashboard.DialogController">
+    
+    <div class="umb-modalcolumn-header">
+        <h1></h1>
+    </div>
+
+    <div class="umb-modalcolumn-body">
+    
+        <div class="umb-panel-body no-header with-footer compact">
+
+
+        </div>
+
+        <div class="umb-panel-footer">
+            <div class="umb-el-wrap umb-panel-buttons">
+                <div class="btn-toolbar umb-btn-toolbar pull-right">
+		        
+                    <a href ng-click="close()" class="btn btn-link">
+                        Cancel
+                    </a>
+
+                    <button
+                        class="btn btn-primary"
+                        ng-click="doUpdate()"
+                        ng-disabled="selectedUsers.length == 0">
+                        Update
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
