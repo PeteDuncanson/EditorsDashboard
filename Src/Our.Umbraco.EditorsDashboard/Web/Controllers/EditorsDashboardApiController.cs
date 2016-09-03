@@ -26,16 +26,17 @@ namespace Our.Umbraco.EditorsDashboard.Web.Controllers
         [HttpGet]
         public IEnumerable<object> GetFavourites()
         {
-            var favs = _edService.GetFavouritesByUserId(Security.CurrentUser.Id).ToList();
-            var content = Services.ContentService.GetByIds(favs.Select(x => x.NodeId)).ToList();
+            var favourites = _edService.GetFavouritesByUserId(Security.CurrentUser.Id).ToList();
+            var content = Services.ContentService.GetByIds(favourites.Select(x => x.NodeId)).ToList();
 
-            foreach (var fav in favs)
+            foreach (var favourite in favourites)
             {
-                var node = content.FirstOrDefault(x => x.Id == fav.NodeId);
+                var node = content.FirstOrDefault(x => x.Id == favourite.NodeId);
                 if (node != null)
                 {
-                    yield return new {
-                        id = fav.Id,
+                    yield return new
+                    {
+                        id = favourite.Id,
                         nodeId = node.Id,
                         name = node.Name
                     };
@@ -44,9 +45,9 @@ namespace Our.Umbraco.EditorsDashboard.Web.Controllers
         }
 
         [HttpPost]
-        public void RemoveFavourite(int id)
+        public void RemoveFromFavourites(int nodeId)
         {
-            _edService.RemoveFavourite(id);
+            _edService.RemoveFromFavourites(nodeId, Security.CurrentUser.Id);
         }
     }
 }

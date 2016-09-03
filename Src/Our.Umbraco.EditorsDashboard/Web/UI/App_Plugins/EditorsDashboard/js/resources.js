@@ -24,17 +24,17 @@
                     'Failed to add to favourites'
                 );
             },
-            removeFavourite: function (favId) {
-                var url = "/umbraco/backoffice/EditorsDashboard/EditorsDashboardApi/RemoveFavourite";
+            removeFromFavourites: function (nodeId) {
+                var url = "/umbraco/backoffice/EditorsDashboard/EditorsDashboardApi/RemoveFromFavourites";
                 return umbRequestHelper.resourcePromise(
                     $http({
                         url: url,
                         method: "POST",
                         params: {
-                            id: favId
+                            nodeId: nodeId
                         }
                     }),
-                    'Failed to remove favourites'
+                    'Failed to remove from favourites'
                 );
             }
         };

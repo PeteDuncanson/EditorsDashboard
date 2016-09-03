@@ -1,10 +1,14 @@
 ﻿<div class="bua bua--dashboard" ng-controller="Our.Umbraco.EditorsDashboard.DashboardController">
     
-    <h1>Hello</h1>
+    <h1>Editors Dashboard</h1>
     
+    <h2>Favourited Content</h2>
     <ul>
         <li ng-repeat="f in favourites">
-            <a ng-click="remove(f)" prevent-default><i class="icon icon-delete"></i></a> <a href="/umbraco/#/content/content/edit/{{f.nodeId}}">{{f.name}}</a>
+            <span>
+                <a ng-click="remove(f)" prevent-default><i class="icon icon-delete"></i></a>
+                <a href="/umbraco/#/content/content/edit/{{f.nodeId}}">{{f.name}}</a>
+            </span>
         </li>
     </ul>
 
